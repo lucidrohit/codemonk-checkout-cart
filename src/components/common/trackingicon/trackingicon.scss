@@ -1,0 +1,44 @@
+.tracking-progress {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.tracking-icon {
+  --size-tracking-icon: 2.5rem;
+  min-width: var(--size-tracking-icon);
+  min-height: var(--size-tracking-icon);
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--color-placeholder);
+}
+
+.tracking-icon.active {
+  border: 0.3rem solid var(--color-text);
+  display: flex;
+  align-items: center;
+  .tracking-icon__inner {
+    --inner-size: 1.2rem;
+    position: absolute;
+    min-width: var(--inner-size);
+    min-height: var(--inner-size);
+    top: calc(50% - var(--inner-size) / 2);
+    left: calc(50% - var(--inner-size) / 2);
+    border-radius: 50%;
+    background-color: var(--color-text);
+    z-index: 1;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--color-placeholder);
+  margin: 0.5rem;
+}
+
+.tracking-progress:has(.tracking-icon.active) {
+  .progress-bar {
+    background-color: var(--color-text);
+  }
+}

@@ -1,0 +1,4 @@
+export const INCREMENT = "INCREMENT"
+export const DECREMENT = "DECREMENT"
+export const QUANTITY_UPDATE = "QUANTITY_UPDATE"
+export const DELETE_PRODUCT = "DELETE_PRODUCT"

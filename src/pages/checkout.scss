@@ -1,0 +1,7 @@
+.checkout{
+    background-color: var(--color-placeholder);
+    &__main{
+        margin-left: var(--size-padding);
+        margin-right: var(--size-padding);
+    }
+}
